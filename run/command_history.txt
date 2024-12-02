@@ -1,0 +1,13 @@
+/give Dev minecraft:acacia_pressure_plate
+/effect give Dev minecraft:hunger 10 6
+/effect give Dev minecraft:hunger 10 255
+/time set noon
+/effect clear
+/effect give Dev minecraft:hunger 10 255
+/time set 0
+/effect give Dev minecraft:hunger 10 255
+/setworldspawn
+/kill
+/effect give Dev minecraft:hunger 10 255
+/time set 0
+/gamerule doDaylightCycle false
