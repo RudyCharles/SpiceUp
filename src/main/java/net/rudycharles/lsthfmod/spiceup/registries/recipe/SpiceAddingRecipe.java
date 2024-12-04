@@ -55,7 +55,7 @@ public class SpiceAddingRecipe extends CustomRecipe {
         for (int i = 0; i < craftingInput.size(); i++) {
             ItemStack itemstack1 = craftingInput.getItem(i);
             if (!itemstack1.isEmpty()) {
-                if (itemstack1.is(ItemTags.DYEABLE)) {
+                if (itemstack1.is(Items.POTION) || itemstack1.has(DataComponents.FOOD)) {
                     if (!itemstack.isEmpty()) {
                         return ItemStack.EMPTY;
                     }
@@ -67,6 +67,7 @@ public class SpiceAddingRecipe extends CustomRecipe {
                     }
 
                     spice = itemstack1.copy();
+                    break;
                 }
             }
         }
