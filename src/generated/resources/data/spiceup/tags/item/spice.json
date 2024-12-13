@@ -1,6 +1,8 @@
 {
   "values": [
     "spiceup:salt",
-    "minecraft:sugar"
+    "minecraft:sugar",
+    "minecraft:fire_charge",
+    "minecraft:honey_bottle"
   ]
 }

@@ -16,6 +16,8 @@ public class Spices {
         HashMap<Spice, Item> map = new HashMap<>();
         map.put(SALT, SpiceItem.SALT.get());
         map.put(SUGAR, Items.SUGAR);
+        map.put(GLAZED, Items.HONEY_BOTTLE);
+        map.put(FIERY, Items.FIRE_CHARGE);
         return map;
     }
 
@@ -31,8 +33,23 @@ public class Spices {
     public static final Spice SUGAR = new Spice.Builder()
             .addNutrient(2)
             .addSaturation(2)
-            .addEffect(MobEffects.MOVEMENT_SPEED)
-            .addEffect(MobEffects.DIG_SPEED)
+            .addEffect(SpiceEffect.SUGAR_RUSH)
+            .duration(400)
+            .amplifier(0)
+            .build();
+
+    public static final Spice GLAZED = new Spice.Builder()
+            .addNutrient(3)
+            .addSaturation(3)
+            .addEffect(SpiceEffect.SUGAR_RUSH)
+            .duration(400)
+            .amplifier(1)
+            .build();
+
+    public static final Spice FIERY = new Spice.Builder()
+            .addNutrient(0)
+            .addSaturation(0)
+            .addEffect(SpiceEffect.FIERY_SPIRIT)
             .duration(400)
             .amplifier(0)
             .build();

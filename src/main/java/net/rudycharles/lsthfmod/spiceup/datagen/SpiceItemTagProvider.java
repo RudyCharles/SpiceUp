@@ -23,7 +23,9 @@ public class SpiceItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(SpiceTag.Items.SPICE)
                 .add(SpiceItem.SALT.get())
-                .add(Items.SUGAR);
+                .add(Items.SUGAR)
+                .add(Items.FIRE_CHARGE)
+                .add(Items.HONEY_BOTTLE);
 
         tag(SpiceTag.Items.CONSUMABLE)
                 .add(Items.APPLE)
@@ -67,8 +69,7 @@ public class SpiceItemTagProvider extends ItemTagsProvider {
                 .add(Items.RABBIT_STEW)
                 .add(Items.MILK_BUCKET)
                 .add(Items.HONEY_BOTTLE)
-                .add(Items.POTION)
-                .add(Items.SUSPICIOUS_STEW);
+                .add(Items.POTION);
 
     }
 }

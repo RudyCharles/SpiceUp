@@ -63,7 +63,7 @@ public class SpiceAddingRecipe extends CustomRecipe {
                 if (itemstack1.is(SpiceTag.Items.SPICE)) {
                     spice = itemstack1.copy();
                     if (!(itemstack.get(SpiceDataComponent.STORED_SPICE) == itemstack1.get(SpiceDataComponent.STORED_SPICE))) {
-                        itemstack.set(SpiceDataComponent.STORED_SPICE, spice.getOrDefault(SpiceDataComponent.STORED_SPICE, Spices.EMPTY));
+                        itemstack.set(SpiceDataComponent.APPLIED_SPICE, spice.getOrDefault(SpiceDataComponent.STORED_SPICE, Spices.EMPTY));
                         break;
                     } else {
                         return ItemStack.EMPTY;

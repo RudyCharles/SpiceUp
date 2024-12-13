@@ -20,6 +20,10 @@ public class SpiceDataComponent {
             register("stored_spice", spiceBuilder ->
                     spiceBuilder.persistent(Spice.DIRECT_CODEC).networkSynchronized(Spice.DIRECT_STREAM_CODEC).cacheEncoding());
 
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Spice>> APPLIED_SPICE =
+            register("applied_spice", spiceBuilder ->
+                    spiceBuilder.persistent(Spice.DIRECT_CODEC).networkSynchronized(Spice.DIRECT_STREAM_CODEC).cacheEncoding());
+
     private static <T> DeferredHolder<DataComponentType<?>, DataComponentType<T>> register(String name, UnaryOperator<DataComponentType.Builder<T>> builderOperator) {
         return DATA_COMPONENT_TYPES.register(name, () -> builderOperator.apply(DataComponentType.builder()).build());
     }

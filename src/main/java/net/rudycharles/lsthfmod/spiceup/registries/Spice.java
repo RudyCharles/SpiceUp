@@ -11,6 +11,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.Potion;
@@ -47,6 +48,13 @@ public record Spice(int addNut, float addSat, List<Holder<MobEffect>> addEffect,
                     ByteBufCodecs.VAR_INT, Spice::amplifier,
                     Spice::new
             );
+
+    public void eating(Spice spice,Player player) {
+        player.getFoodData().eat(spice.addNut(), spice.addSat());
+        for (Holder<MobEffect> mobEffectHolder : spice.addEffect()) {
+            player.addEffect(new MobEffectInstance(mobEffectHolder, spice.duration(), spice.amplifier()));
+        }
+    }
 
     @Override
     public String toString() {

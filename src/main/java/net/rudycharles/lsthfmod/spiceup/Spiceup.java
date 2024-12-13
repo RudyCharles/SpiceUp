@@ -20,6 +20,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.rudycharles.lsthfmod.spiceup.data.SpiceDataComponent;
 import net.rudycharles.lsthfmod.spiceup.effects.SpiceEffect;
+import net.rudycharles.lsthfmod.spiceup.registries.attributes.SpiceAttribute;
 import net.rudycharles.lsthfmod.spiceup.registries.blocks.SpiceBlock;
 import net.rudycharles.lsthfmod.spiceup.registries.items.SpiceCreativeTab;
 import net.rudycharles.lsthfmod.spiceup.registries.items.SpiceItem;
@@ -47,6 +48,7 @@ public class Spiceup
         SpiceItem.register(modEventBus);
         SpiceBlock.register(modEventBus);
 
+        SpiceAttribute.register(modEventBus);
         SpiceDataComponent.register(modEventBus);
         SpiceCreativeTab.register(modEventBus);
         SpiceEffect.register(modEventBus);

@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rudycharles.lsthfmod.spiceup.Spiceup;
+import net.rudycharles.lsthfmod.spiceup.registries.attributes.SpiceAttribute;
 
 import java.util.function.Supplier;
 
@@ -22,13 +23,18 @@ public class SpiceEffect {
 
     public static final Holder<MobEffect> SALTY =
             MOB_EFFECT.register("salty_effect", () -> new SaltyEffect(MobEffectCategory.BENEFICIAL,ParticleTypes.EFFECT)
-                    .addAttributeModifier(Attributes.ATTACK_DAMAGE, ResourceLocation.fromNamespaceAndPath(Spiceup.MODID,"salty_atk"), 0.25f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                     .addAttributeModifier(Attributes.ATTACK_SPEED, ResourceLocation.fromNamespaceAndPath(Spiceup.MODID,"salty_spd"), -0.10f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
             );
 
     public static final Holder<MobEffect> SUGAR_RUSH =
             MOB_EFFECT.register("sugar_effect", () -> new SugarEffect(MobEffectCategory.BENEFICIAL)
                     .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(Spiceup.MODID,"sweet_mov"), 0.35f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+                    .addAttributeModifier(Attributes.BLOCK_BREAK_SPEED, ResourceLocation.fromNamespaceAndPath(Spiceup.MODID,"sweet_haste"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            );
+
+    public static final Holder<MobEffect> FIERY_SPIRIT =
+            MOB_EFFECT.register("fiery_effect", () -> new FieryEffect(MobEffectCategory.BENEFICIAL)
+                    .addAttributeModifier(SpiceAttribute.FEROCITY, ResourceLocation.fromNamespaceAndPath(Spiceup.MODID,"spicy_fero"), 0.7f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
             );
 
     public static void register(IEventBus eventBus) {

@@ -18,3 +18,4 @@
 /locate biome minecraft:beach
 /effect give Dev minecraft:night_vision infinite
 /effect give Dev minecraft:hunger 5 255
+/give @a iron_sword[attribute_modifiers={modifiers:[{type:"generic.ferocity",amount:7,slot:hand,operation:add_value,id:1734620304454}]}]
