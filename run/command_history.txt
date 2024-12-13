@@ -17,3 +17,4 @@
 /effect give Dev spiceup:salty_effect 100 1
 /locate biome minecraft:beach
 /effect give Dev minecraft:night_vision infinite
+/effect give Dev minecraft:hunger 5 255

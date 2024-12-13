@@ -1,9 +1,22 @@
 {
-  "minecraft:recipes/transportation/mangrove_boat": {
+  "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
-      "in_water": "2024-12-11 21:38:19 +0700"
+      "unlock_right_away": "2024-12-11 21:37:42 +0700"
     },
     "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2024-12-13 12:22:04 +0700",
+      "minecraft:forest": "2024-12-13 12:20:54 +0700",
+      "minecraft:sparse_jungle": "2024-12-11 21:37:43 +0700",
+      "minecraft:river": "2024-12-13 12:20:41 +0700",
+      "minecraft:lush_caves": "2024-12-11 21:37:55 +0700",
+      "minecraft:savanna": "2024-12-13 12:21:36 +0700",
+      "minecraft:bamboo_jungle": "2024-12-11 21:37:58 +0700",
+      "minecraft:plains": "2024-12-13 12:20:53 +0700"
+    },
+    "done": false
   },
   "minecraft:adventure/minecraft_trials_edition": {
     "criteria": {
@@ -11,9 +24,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crafting_table": {
+  "minecraft:recipes/transportation/mangrove_boat": {
     "criteria": {
-      "unlock_right_away": "2024-12-11 21:37:42 +0700"
+      "in_water": "2024-12-11 21:38:19 +0700"
     },
     "done": true
   },
@@ -28,14 +41,6 @@
       "in_water": "2024-12-11 21:38:19 +0700"
     },
     "done": true
-  },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:sparse_jungle": "2024-12-11 21:37:43 +0700",
-      "minecraft:lush_caves": "2024-12-11 21:37:55 +0700",
-      "minecraft:bamboo_jungle": "2024-12-11 21:37:58 +0700"
-    },
-    "done": false
   },
   "minecraft:recipes/transportation/bamboo_raft": {
     "criteria": {
@@ -70,6 +75,71 @@
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "in_water": "2024-12-11 21:38:19 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/sugar_from_sugar_cane": {
+    "criteria": {
+      "has_sugar_cane": "2024-12-13 12:22:11 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/paper": {
+    "criteria": {
+      "has_reeds": "2024-12-13 12:22:11 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/mojang_banner_pattern": {
+    "criteria": {
+      "has_enchanted_golden_apple": "2024-12-13 12:22:29 +0700"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "apple": "2024-12-13 12:24:38 +0700",
+      "chicken": "2024-12-13 12:25:16 +0700",
+      "golden_apple": "2024-12-13 12:24:32 +0700",
+      "enchanted_golden_apple": "2024-12-13 12:23:07 +0700",
+      "cooked_beef": "2024-12-13 12:23:46 +0700",
+      "chorus_fruit": "2024-12-13 12:24:20 +0700"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2024-12-13 12:23:07 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/popped_chorus_fruit": {
+    "criteria": {
+      "has_chorus_fruit": "2024-12-13 12:24:09 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_chicken_from_campfire_cooking": {
+    "criteria": {
+      "has_chicken": "2024-12-13 12:24:51 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_chicken": {
+    "criteria": {
+      "has_chicken": "2024-12-13 12:24:51 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_chicken_from_smoking": {
+    "criteria": {
+      "has_chicken": "2024-12-13 12:24:51 +0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cake": {
+    "criteria": {
+      "has_egg": "2024-12-13 12:31:34 +0700"
     },
     "done": true
   },

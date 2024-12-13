@@ -30,19 +30,12 @@ public class ModEvent {
 
         if (storedSpice != Spices.EMPTY) {
             if (livingEntity instanceof Player player) {
-                if (usedItem.getItem() == Items.POTION) {
-                    for (Holder<MobEffect> mobEffectHolder: storedSpice.addEffect()) {
-                        livingEntity.addEffect(new MobEffectInstance(mobEffectHolder,storedSpice.duration(),storedSpice.amplifier()));
-                    }
-                } else {
-                    for (Holder<MobEffect> mobEffectHolder: storedSpice.addEffect()) {
-                        livingEntity.addEffect(new MobEffectInstance(mobEffectHolder,storedSpice.duration(),storedSpice.amplifier()));
-                    }
-                    player.getFoodData().eat(storedSpice.addNut(),storedSpice.addSat());
+                for (Holder<MobEffect> mobEffectHolder : storedSpice.addEffect()) {
+                    livingEntity.addEffect(new MobEffectInstance(mobEffectHolder, storedSpice.duration(), storedSpice.amplifier()));
                 }
+                player.getFoodData().eat(storedSpice.addNut(), storedSpice.addSat());
             }
         }
-
     }
 
     @SubscribeEvent
@@ -51,7 +44,7 @@ public class ModEvent {
         if (stack.is(SpiceTag.Items.CONSUMABLE) && stack.has(SpiceDataComponent.STORED_SPICE)) {
             Spice spice = stack.get(SpiceDataComponent.STORED_SPICE);
             event.getToolTip().add(Component.translatable("tooltip.seasoned").withStyle(ChatFormatting.GRAY));
-            event.getToolTip().add(Component.translatable(Spices.MapOFSpice().get(spice).getDescriptionId()).withStyle(ChatFormatting.GRAY));
+            event.getToolTip().add(Component.translatable(Spices.MapOFSpice().get(spice).getDescriptionId()).withStyle(ChatFormatting.DARK_GRAY));
         }
     }
 }
