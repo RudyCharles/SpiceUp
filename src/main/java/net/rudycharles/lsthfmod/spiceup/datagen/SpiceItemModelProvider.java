@@ -14,7 +14,6 @@ public class SpiceItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(SpiceItem.SALTED_MEAT.get());
         basicItem(SpiceItem.SALT.get());
     }
 }

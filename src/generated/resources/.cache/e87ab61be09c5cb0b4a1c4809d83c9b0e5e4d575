@@ -1,2 +1,3 @@
-// 1.21.1	2024-12-01T00:24:14.9574996	Tags for minecraft:item mod id spiceup
-f1a573e6729c3f41f48ce4644333736855274919 data/spiceup/tags/item/spice.json
+// 1.21.1	2024-12-07T12:30:50.158522	Tags for minecraft:item mod id spiceup
+14590dc8e3b07b4e9a6f6a7be2c25b2721454f86 data/spiceup/tags/item/consumable.json
+3c145d408a0084234b04d1c7fd1f84292b3081af data/spiceup/tags/item/spice.json

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -18,9 +19,11 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.rudycharles.lsthfmod.spiceup.data.SpiceDataComponent;
+import net.rudycharles.lsthfmod.spiceup.effects.SpiceEffect;
+import net.rudycharles.lsthfmod.spiceup.registries.blocks.SpiceBlock;
+import net.rudycharles.lsthfmod.spiceup.registries.items.SpiceCreativeTab;
 import net.rudycharles.lsthfmod.spiceup.registries.items.SpiceItem;
 import net.rudycharles.lsthfmod.spiceup.registries.recipe.SpiceRecipeSerializer;
-import net.rudycharles.lsthfmod.spiceup.registries.recipe.SpiceRecipeType;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -41,10 +44,13 @@ public class Spiceup
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        SpiceDataComponent.register(modEventBus);
-        SpiceRecipeType.register(modEventBus);
-        SpiceRecipeSerializer.register(modEventBus);
         SpiceItem.register(modEventBus);
+        SpiceBlock.register(modEventBus);
+
+        SpiceDataComponent.register(modEventBus);
+        SpiceCreativeTab.register(modEventBus);
+        SpiceEffect.register(modEventBus);
+        SpiceRecipeSerializer.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -57,7 +63,6 @@ public class Spiceup
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(SpiceItem.SALTED_MEAT.get());
             event.accept(SpiceItem.SALT.get());
         }
     }

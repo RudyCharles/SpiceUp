@@ -9,6 +9,7 @@ import net.rudycharles.lsthfmod.spiceup.Spiceup;
 public class SpiceTag {
     public static class Items {
         public static final TagKey<Item> SPICE = createTag("spice");
+        public static final TagKey<Item> CONSUMABLE = createTag("consumable");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Spiceup.MODID,name));

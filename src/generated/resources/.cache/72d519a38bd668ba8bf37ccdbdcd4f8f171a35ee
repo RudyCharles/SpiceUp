@@ -1,2 +1,3 @@
-// 1.21.1	2024-12-01T00:24:14.9564986	Tags for minecraft:block mod id spiceup
-cfab2ab481bf476a645d326b87627918009b9e50 data/minecraft/tags/block/incorrect_for_diamond_tool.json
+// 1.21.1	2024-12-11T12:41:26.9138468	Tags for minecraft:block mod id spiceup
+d1823351e2918a996069a60ee01d578b3b3b0135 data/minecraft/tags/block/incorrect_for_wooden_tool.json
+d1823351e2918a996069a60ee01d578b3b3b0135 data/minecraft/tags/block/mineable/pickaxe.json

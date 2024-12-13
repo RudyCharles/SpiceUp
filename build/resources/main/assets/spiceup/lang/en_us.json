@@ -1,7 +1,11 @@
 {
-  "itemGroup.spiceup": "Example Mod Tab",
-  "block.spiceup.example_block": "Example Block",
+  "item.spiceup.salt": "Salt",
+  "block.spiceup.salt_block": "Block of Salt",
+  "itemGroup.spiceup.spice_tab": "Spice Tab",
 
-  "item.spiceup.salted_meat": "Salted Meat",
-  "item.spiceup.salt": "Salt"
+  "effect.spiceup.salty_effect": "Salty",
+  "effect.spiceup.sugar_effect": "Sugar Rush",
+
+  "component.spiced": "Seasoned",
+  "tooltip.seasoned": "Seasoned with:"
 }
